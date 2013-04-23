@@ -1,23 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="javascript/130402.js"></script>
-    <script src="javascript/update_results_container.js"></script>
-	<title>Weather Project</title>
+	<title>WeatherGeo Project :: Nick M., Jamie Y., Trevor B., Anthony B.</title>
+    <meta charset="utf-8">
+	
+	<link href="css/styles.css" rel="stylesheet">
   </head>
+  
   <body>
+	<div id="wrapper">
 	
-    <p>Hello! <br>
-		Please enter your location.  You can enter your zip code or attempt to find your current location. 
-	</p>
-	
+		<h1 id="greeting">Hello!</h1>
+		<h2>Thank you for choosing WeatherGeo!!!</h2>
+			<h4>Your local Temperature...</h4>
+		
     <form id="weather_data">
-	  Zip Code: <input type="text" name="zip"><br>
-	  Find my Location: <input type="text" name="search"><br>
-      <input type="submit" value="Get Weather Data">
+		<h3>Please enter your City, State(initials):</h3>
+			<p>Find my Location: <input type="text" name="search" placeholder="City, State:"></p>
+			<input type="submit" class="search" value="Search Location"><br><br><br>
+			
+		<h3>Please enter your Zip Code:</h3>
+			<p>Zip Code: <input type="text" name="zip" placeholder="Zip Code:"></p><br>			
+			<input type="submit" class="button" value="Get Weather Data"><br><br><br>
+			<h4>At your local time...</h4>
     </form>
     
     <div id="results"></div>
-  </body>
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="javascript/130402.js"></script>
+    <script src="javascript/update_results_container.js"></script>
+	
+	</div> <!--- div#wrapper -->
+  
+  </body>    
 </html>
