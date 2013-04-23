@@ -1,0 +1,62 @@
+#wrapper {
+	margin: 0 auto;
+    background-image: url("../images/thunderstorm.jpg");
+	height: 600px;
+	width: 600px;
+	background-color: #2554C7;
+}
+
+#greeting {
+	padding-top: 35px;
+}
+
+h1 {
+	color: #AFC7C7;
+	text-align: center;
+}
+
+h2 {
+	color: Yellow;
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+	color: Fuchsia;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	color: Lime;
+}
+
+input.search {
+	color: Red;
+	background-color: Green;
+	font-family: Algerian, Arial, "Times New Roman";
+	font-weight: bold;
+	font-size: larger;
+    text-shadow: 3px 4px 5px #000;
+	clear: both;
+	float: left;
+	margin-left: 205px;	
+}
+
+p {
+	text-align: center;
+	color: Orange;
+	font-weight: bold;
+}
+
+input.button {
+	color: Red;
+	background-color: Green;
+	font-family: Algerian, Arial, "Times New Roman";
+	font-weight: bold;
+	font-size: larger;
+    text-shadow: 3px 4px 5px #000;
+	clear: both;
+	float: left;
+	margin-left: 200px;
+}
