@@ -49,7 +49,7 @@ p {
 	font-weight: bold;
 }
 
-input.button {
+#button {
 	color: Red;
 	background-color: Green;
 	font-family: Algerian, Arial, "Times New Roman";

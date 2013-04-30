@@ -1,6 +1,6 @@
 $(function() {
   var updateResultsContainer = function() {
-    var html = []
+    var html = [results]
     html.push("<li>");
     html.push("This is some text for the results container");
     html.push("</li>");
