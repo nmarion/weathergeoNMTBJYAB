@@ -49,6 +49,11 @@ p {
 	font-weight: bold;
 }
 
+#results {
+	background-color: #fff;
+	color: #000;
+}
+
 #button {
 	color: Red;
 	background-color: Green;
