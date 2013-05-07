@@ -9,30 +9,43 @@ $(function() {
 
 		var url = "http://weather-api.herokuapp.com/weather/" + apiKey + "/conditions/z/" + zip + "/";
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 		if(zip != "" && location != "") {
 =======
 
 		
 >>>>>>> master
+=======
+
+		
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
 			$.ajax({
 				url: url,
 				success: function(data) {
 					var jData = JSON.parse(data)
 <<<<<<< HEAD
-				
-=======
-
->>>>>>> master
-					var currOb = jData.current_observation;
-					var temp_f = currOb.temperature_string;
-					var wind_mph = currOb.wind_mph;
-					var weather = currOb.weather;
 <<<<<<< HEAD
 				
 =======
 
 >>>>>>> master
+=======
+
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
+					var currOb = jData.current_observation;
+					var temp_f = currOb.temperature_string;
+					var wind_mph = currOb.wind_mph;
+					var weather = currOb.weather;
+<<<<<<< HEAD
+<<<<<<< HEAD
+				
+=======
+
+>>>>>>> master
+=======
+
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
 					var results = $("div#results")
 					results.html("<h1>Results:</h1>");
 					results.append("<li>Current Weather: " + weather + "</li>");
@@ -44,10 +57,14 @@ $(function() {
 				}
 			})
 <<<<<<< HEAD
+<<<<<<< HEAD
 		}
 =======
 		
 >>>>>>> master
+=======
+		
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
 	}
 
 		$('#weather_data').submit(function() {
@@ -55,11 +72,15 @@ $(function() {
 		return false;
 <<<<<<< HEAD
 	});
+<<<<<<< HEAD
 =======
 		});	
 	
 >>>>>>> master
 	
+=======
+
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
 	var input = document.getElementById('place');
 	var options = {
 		types: ['(cities)'],
@@ -67,6 +88,7 @@ $(function() {
 	};
 
 	autocomplete = new google.maps.places.Autocomplete(input, options);
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 =======
@@ -101,6 +123,20 @@ $(function() {
 			
 			})
 	})
+=======
+
+	google.maps.event.addListener(autocomplete, 'place_changed', function() {
+		var place = autocomplete.getPlace();
+		var apiKey = "c634029e8e35b2db";
+		var latitude = place.geometry.location.lat();
+		var longitude = place.geometry.location.lng();
+		var url = "http://weather-api.herokuapp.com/weather/" + apiKey + "/conditions/q/" + latitude +"," + longitude + "/";
+
+	
+		});
+		
+	
+>>>>>>> 16647fe4e5373cbb784f561d252eb16b496b6324
 	
 	
 })
