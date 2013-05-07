@@ -8,18 +8,31 @@ $(function() {
 		var apiKey = "c634029e8e35b2db";
 
 		var url = "http://weather-api.herokuapp.com/weather/" + apiKey + "/conditions/z/" + zip + "/";
+<<<<<<< HEAD
 	
 		if(zip != "" && location != "") {
+=======
+
+		
+>>>>>>> master
 			$.ajax({
 				url: url,
 				success: function(data) {
 					var jData = JSON.parse(data)
+<<<<<<< HEAD
 				
+=======
+
+>>>>>>> master
 					var currOb = jData.current_observation;
 					var temp_f = currOb.temperature_string;
 					var wind_mph = currOb.wind_mph;
 					var weather = currOb.weather;
+<<<<<<< HEAD
 				
+=======
+
+>>>>>>> master
 					var results = $("div#results")
 					results.html("<h1>Results:</h1>");
 					results.append("<li>Current Weather: " + weather + "</li>");
@@ -30,13 +43,22 @@ $(function() {
 					console.log("Error");
 				}
 			})
+<<<<<<< HEAD
 		}
+=======
+		
+>>>>>>> master
 	}
 
-	$('#weather_data').submit(function() {
+		$('#weather_data').submit(function() {
 		updateResultsContainer();
 		return false;
+<<<<<<< HEAD
 	});
+=======
+		});	
+	
+>>>>>>> master
 	
 	var input = document.getElementById('place');
 	var options = {
@@ -45,4 +67,41 @@ $(function() {
 	};
 
 	autocomplete = new google.maps.places.Autocomplete(input, options);
+<<<<<<< HEAD
 });
+=======
+
+	google.maps.event.addListener(autocomplete, 'place_changed', function() {
+		var place = autocomplete.getPlace();
+		
+		var apiKey = "c634029e8e35b2db";
+		var latitude = place.geometry.location.lat();
+		var longitude = place.geometry.location.lng();
+		var url = "http://weather-api.herokuapp.com/weather/" + apiKey + "/conditions/g/" + latitude +"/" + longitude + "/";
+		
+		$.ajax({
+				url: url,
+				success: function(data) {
+					var jData = JSON.parse(data)
+
+					var currOb = jData.current_observation;
+					var temp_f = currOb.temperature_string;
+					var wind_mph = currOb.wind_mph;
+					var weather = currOb.weather;
+
+					var results = $("div#results")
+					results.html("<h1>Results:</h1>");
+					results.append("<li>Current Weather: " + weather + "</li>");
+					results.append("<li>Current Temperature: " + temp_f + "</li>");
+					results.append("<li>Current Wind Speed: " + wind_mph + "</li>");
+				},
+				error: function() {
+					console.log("Error");
+				}
+			
+			})
+	})
+	
+	
+})
+>>>>>>> master
